@@ -1,47 +1,17 @@
-
 backend:
   name: git-gateway
   branch: main
 
-media_folder: "images/uploads"
-public_folder: "/images/uploads"
+media_folder: "static/uploads"
+public_folder: "/uploads"
 
 collections:
   - name: "blog"
-    label: "Articoli Blog"
-    folder: "content/blog"
+    label: "Articoli"
+    folder: "blog"
     create: true
     slug: "{{slug}}"
     fields:
       - { label: "Titolo", name: "title", widget: "string" }
       - { label: "Data", name: "date", widget: "datetime" }
-      - { label: "Contenuto", name: "body", widget: "markdown" }
-
-  - name: "librodelmese"
-    label: "Libro del Mese"
-    folder: "content/librodelmese"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Titolo Libro", name: "title", widget: "string" }
-      - { label: "Autore", name: "autore", widget: "string" }
-      - { label: "Descrizione", name: "body", widget: "markdown" }
-
-  - name: "autore"
-    label: "Autore del Mese"
-    folder: "content/autore"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Nome Autore", name: "title", widget: "string" }
-      - { label: "Biografia", name: "body", widget: "markdown" }
-
-  - name: "prodotti"
-    label: "Prodotti Amazon"
-    folder: "content/amazon"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Nome Prodotto", name: "title", widget: "string" }
-      - { label: "Link", name: "link", widget: "string" }
-      - { label: "Descrizione", name: "body", widget: "markdown" }
+      - { label: "Corpo", name: "body", widget: "markdown" } il
