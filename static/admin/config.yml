@@ -2,14 +2,18 @@ backend:
   name: git-gateway
   branch: main
 
-media_folder: 'images/uploads'
-public_folder: '/images/uploads'
+site_url: https://writezon.it
+display_url: https://writezon.it
+
+media_folder: "static/images/uploads"
+public_folder: "/images/uploads"
 
 collections:
-  - name: 'blog'
-    label: 'Blog'
-    folder: 'blog'
+  - name: "articoli"
+    label: "Articoli"
+    folder: "content/articoli"
     create: true
+    slug: "{{slug}}"
     fields:
-      - {label: 'Title', name: 'title', widget: 'string'}
-      - {label: 'Body', name: 'body', widget: 'markdown'}
+      - { label: "Titolo", name: "title", widget: "string" }
+      - { label: "Contenuto", name: "body", widget: "markdown" }
